@@ -1,0 +1,16 @@
+#posts to patch action?
+
+<h1>Edit this Recipe</h1>
+
+<h2>Current Ingredients: <%=@recipe.ingredients%></h2>
+
+<form action= "/recipes/<%=@recipe.id%>" method="post">
+<input id="hidden" type="hidden" name="_method" value="patch">
+<p><label for "name">Name: </label>
+<input id="name" type="text" name="name"</input></p>
+<p><label for "ingredients">Ingredients: </label>
+<input id="ingredients" type="text" name="ingredients"</input></p>
+<p><label for "cook_time">Cook Time: </label>
+<input id="cook_time" type="text" name="cook_time"</input></p>
+<input id="submit" type="submit" value="edit recipe">
+</form>
